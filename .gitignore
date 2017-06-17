@@ -1,0 +1,7 @@
+/.settings/
+/cert/
+/fdt_launcher/
+/deploy/
+/scripts/
+/bin/
+*.project
