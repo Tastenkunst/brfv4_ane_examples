@@ -111,7 +111,9 @@ package {
 
 			_stats = new BitmapDataStats();
 			
-			addChild(_camUtils.video);
+			if(!(_example is Flare3d_example)) {
+				addChild(_camUtils.video);	
+			}
 			addChild(_example);
 			addChild(_stats);
 						
@@ -174,6 +176,6 @@ package {
 			Flare3d_example,
 			face_texture_overlay,
 			face_swap_two_faces
-		];
+		]; ar;
 	}
 }

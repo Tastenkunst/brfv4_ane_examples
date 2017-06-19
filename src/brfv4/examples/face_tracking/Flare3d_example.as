@@ -11,16 +11,16 @@ package brfv4.examples.face_tracking {
 	public class Flare3d_example extends BRFBasicAS3Example {
 		
 		private var f3d : BRFv4Drawing3DUtils_Flare3D;
-		private var numFacesToTrack : int = 2;
 		
 		override public function initCurrentExample(brfManager : BRFManager, resolution : Rectangle) : void {
 	
 			trace("BRFv4 - advanced - face_tracking - Flare3D example.\n" +
-				"Tracks up to " + numFacesToTrack + " faces and puts glasses on them.");
+				"Puts glasses on a face.");
 				
 			brfManager.init(resolution, resolution, appId);
-			brfManager.setNumFacesToTrack(numFacesToTrack);
-			
+	
+			// Relax starting conditions to eventually find more faces.
+	
 			if(f3d == null) {
 				f3d = new BRFv4Drawing3DUtils_Flare3D(resolution);
 				addChild(f3d);
@@ -33,7 +33,10 @@ package brfv4.examples.face_tracking {
 		
 			brfManager.update(imageData);
 	
-			if(f3d) f3d.hideAll(); // Hide 3d models. Only show them on top of tracked faces.
+			if(f3d) {
+				f3d.hideAll(); // Hide 3d models. Only show them on top of tracked faces.
+				f3d.updateVideo(imageData);
+			}
 	
 			draw.clear();
 	
@@ -54,8 +57,6 @@ package brfv4.examples.face_tracking {
 					if(f3d) f3d.update(i, face, true);
 				}
 			}
-	
-			if(f3d) { f3d.render(); }
 		}
 	
 		public function loadModels() : void {
@@ -65,8 +66,8 @@ package brfv4.examples.face_tracking {
 				// Remove all models and load new ones.
 	
 				f3d.removeAll();
-				f3d.loadOcclusionHead("assets/brfv4_occlusion_head.zf3d", numFacesToTrack);
-				f3d.loadModel("assets/brfv4_flare3d_glasses.zf3d", numFacesToTrack);
+				f3d.loadOcclusionHead("assets/brfv4_occlusion_head.zf3d", 1);
+				f3d.loadModel("assets/brfv4_flare3d_glasses.zf3d", 1);
 			}
 		}
 	}
