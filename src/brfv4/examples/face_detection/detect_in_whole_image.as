@@ -40,7 +40,7 @@ package brfv4.examples.face_detection {
 				maxFaceSize = _faceDetectionRoi.width;
 			}
 	
-			// Merged faces (yellow) will only show up it they are at least 30% of maxFaceSize.
+			// Merged faces (yellow) will only show up if they are at least 30% of maxFaceSize.
 			// Move away from the camera to see the merged detected faces (yellow) disappear.
 	
 			// Btw. the following settings are the default settings set by BRFv4 on init.
