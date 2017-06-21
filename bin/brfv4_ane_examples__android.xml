@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/25.0">
+  <id>com.tastenkunst.brfv4.ane.examples</id>
+  <filename>brfv4_ane_examples</filename>
+  <name>BRFv4 ANE Examples</name>
+  <versionNumber>1.0.0</versionNumber>
+  <initialWindow>
+    <content>brfv4_ane_examples.swf</content>
+    <visible>true</visible>
+    <aspectRatio>portrait</aspectRatio>
+    <autoOrients>false</autoOrients>
+    <fullScreen>true</fullScreen>
+    <renderMode>gpu</renderMode>
+    <!-- <depthAndStencil>true</depthAndStencil> -->
+  </initialWindow>
+  <supportedProfiles>mobileDevice extendedMobileDevice</supportedProfiles>
+  <android>
+    <manifestAdditions><![CDATA[<manifest android:installLocation="auto">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-configuration android:reqFiveWayNav="true" />
+    <supports-screens android:normalScreens="true" />
+    <uses-feature android:required="true" android:name="android.hardware.touchscreen.multitouch" />
+    <application android:enabled="true">
+      <activity android:excludeFromRecents="false">
+        <intent-filter>
+          <action android:name="android.intent.action.MAIN" />
+          <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+    </application>
+    <uses-permission android:name="android.permission.CAMERA" />
+  </manifest>]]></manifestAdditions>
+    <disableMediaCodec>true</disableMediaCodec>
+  </android>
+  <extensions>
+    <extensionID>com.tastenkunst.brfv4.ane.BeyondRealityFace</extensionID>
+  </extensions>
+</application>
+

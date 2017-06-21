@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/25.0">
+  <id>com.tastenkunst.brfv4.ane.examples</id>
+  <filename>brfv4_ane_examples</filename>
+  <name>BRFv4 ANE Examples</name>
+  <versionNumber>1.0.0</versionNumber>
+  <initialWindow>
+    <content>brfv4_ane_examples.swf</content>
+    <visible>true</visible>
+    <renderMode>gpu</renderMode>
+    <!-- <depthAndStencil>true</depthAndStencil> -->
+  </initialWindow>
+  <supportedProfiles>desktop extendedDesktop</supportedProfiles>
+  <extensions>
+    <extensionID>com.tastenkunst.brfv4.ane.BeyondRealityFace</extensionID>
+  </extensions>
+</application>
+
