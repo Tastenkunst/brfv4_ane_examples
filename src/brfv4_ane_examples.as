@@ -105,7 +105,7 @@ package {
 			// "+++ advanced - face tracking +++"
 			
 //			_example = new blink_detection();						// "advanced - face tracking - blink detection"
-//			_example = new Flare3d_example();						// "advanced - face tracking - Flare3D example"			- not implemented
+//			_example = new Flare3d_example();						// "advanced - face tracking - Flare3D example"
 //			_example = new face_texture_overlay();					// "advanced - face tracking - face texture overlay"
 //			_example = new face_swap_two_faces();					// "advanced - face tracking - face swap (two faces)"
 
