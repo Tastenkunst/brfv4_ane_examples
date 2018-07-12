@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application xmlns="http://ns.adobe.com/air/application/25.0">
+<application xmlns="http://ns.adobe.com/air/application/30.0">
   <id>com.tastenkunst.brfv4.ane.examples</id>
   <filename>brfv4_ane_examples</filename>
   <name>BRFv4 ANE Examples</name>
